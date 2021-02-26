@@ -16,6 +16,7 @@ import Sum, Divide, Minus, Multiple
 while True:
     try:
         a = int(input('Which calculation you want to do: \n1-Sum \n2-Minus  \n3-Multiple  \n4-Divide\n'))
+        t=1
         if 0<a<5:
             x = float(input('Please enter 1. value : '))
             y = float(input('Please enter 2. value : '))
@@ -29,7 +30,6 @@ while True:
             print(f'Division of {x} and {y} is = ', Divide.d(x, y))
         else:
             print('What do you really want to do? Please select one of four options.')
-        t=1
         while t==1:
             r=str(input('Do you want to make another calculation (Y/N): '))
             if r=='Y' or r=='y':
@@ -37,9 +37,9 @@ while True:
             elif r=='N' or r=='n':
                 print('Thank you. Have a nice day.')
                 t=5
-                break
             else:
                 print('Please just select just "Y" or "N" ')
+                t=2
         if t==5:
             break
     except ValueError:
